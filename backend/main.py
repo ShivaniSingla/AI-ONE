@@ -80,12 +80,15 @@ def chat(request: ChatRequest):
             content={"detail": error_message},
         )
 
-    save_chat(
-        user_message=request.message,
-        task=task,
-        workflow=result["workflow"],
-        response=result["answer"],
-    )
+    try:
+        save_chat(
+            user_message=request.message,
+            task=result["task"],
+            workflow=result["workflow"],
+            response=result["answer"]
+        )
+    except Exception as e:
+        print("History Error:", e)
 
     return {
         "task": task,
