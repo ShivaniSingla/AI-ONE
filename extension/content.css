@@ -1,0 +1,97 @@
+#ai1-fab {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4589ff 0%, #a56eff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2147483640;
+  box-shadow: 0 4px 20px rgba(69, 137, 255, 0.45);
+  transition: transform 0.2s, box-shadow 0.2s;
+  user-select: none;
+}
+#ai1-fab:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 28px rgba(69, 137, 255, 0.6);
+}
+#ai1-fab.active {
+  transform: scale(0.94);
+  box-shadow: 0 2px 12px rgba(69, 137, 255, 0.3);
+}
+
+/* ─── SIDEBAR WRAPPER ─── */
+#ai1-sidebar-wrapper {
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: 400px;
+  height: 100vh;
+  z-index: 2147483638;
+  transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+}
+#ai1-sidebar-wrapper.open {
+  right: 0;
+}
+
+/* ─── RESIZE HANDLE ─── */
+#ai1-sidebar-handle {
+  width: 5px;
+  height: 100%;
+  background: transparent;
+  cursor: col-resize;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+#ai1-sidebar-handle:hover {
+  background: rgba(69, 137, 255, 0.4);
+}
+
+/* ─── SIDEBAR IFRAME ─── */
+#ai1-sidebar-iframe {
+  flex: 1;
+  height: 100%;
+  border: none;
+  border-left: 1px solid rgba(69, 137, 255, 0.2);
+  background: #0d0e11;
+  box-shadow: -6px 0 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ─── TEXT SELECTION MINI-MENU ─── */
+#ai1-sel-menu {
+  position: absolute;
+  z-index: 2147483641;
+  background: #15171c;
+  border: 1px solid #353944;
+  border-radius: 8px;
+  padding: 4px;
+  display: flex;
+  gap: 3px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  animation: ai1SelIn 0.15s ease;
+}
+@keyframes ai1SelIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: none; }
+}
+.ai1-sel-btn {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background: transparent;
+  color: #9ca3af;
+  font-size: 12px;
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.12s, color 0.12s;
+}
+.ai1-sel-btn:hover {
+  background: rgba(69, 137, 255, 0.15);
+  color: #4589ff;
+}

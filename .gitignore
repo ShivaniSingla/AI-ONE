@@ -1,0 +1,66 @@
+﻿# ─── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# ─── Virtual Environments ────────────────────────────────────────────────────
+.venv
+env/
+venv/
+ENV/
+
+# ─── Environment Variables ───────────────────────────────────────────────────
+backend/.env
+!.env.example
+
+# ─── Database / Persistent Data ─────────────────────────────────────────────
+backend/database/history.json
+
+# ─── Logs ────────────────────────────────────────────────────────────────────
+*.log
+logs/
+pip-log.txt
+
+# ─── Node / JavaScript ───────────────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+.npm
+dist/
+out/
+
+# ─── Chrome Extension Packaging ─────────────────────────────────────────────
+*.crx
+*.pem
+extension.zip
+
+# ─── IDEs & Editors ─────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ─── Operating System Files ──────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ─── Temporary Files ─────────────────────────────────────────────────────────
+*.tmp
+*.temp
+*.bak
+
+# ─── Coverage & Testing ──────────────────────────────────────────────────────
+.coverage
+htmlcov/
+.pytest_cache/
+
+# ─── Documentation Build ─────────────────────────────────────────────────────
+docs/_build/
