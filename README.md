@@ -283,7 +283,8 @@ This is the only place you need to change for deployment.
 
 ## Screenshots
 
-> *(Add screenshots to `docs/screenshots/` and reference them here)*
+> <img width="745" height="406" alt="image" src="https://github.com/user-attachments/assets/849e163e-2921-4b5a-980d-fa5385955c49" />
+
 
 | Feature | Preview |
 |---|---|
