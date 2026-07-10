@@ -45,25 +45,25 @@ Modern AI chat tools are generic — they have no idea what you're looking at. Y
 ┌─────────────────────────────────────────────────────────────┐
 │                     Chrome Extension                        │
 │                                                             │
-│  ┌──────────────┐   ┌───────────────┐   ┌───────────────┐  │
-│  │  popup.js    │   │  sidebar.js   │   │  content.js   │  │
-│  │  (popup UI)  │   │  (side panel) │   │  (page inject)│  │
-│  └──────┬───────┘   └──────┬────────┘   └──────┬────────┘  │
+│  ┌──────────────┐   ┌───────────────┐   ┌───────────────┐   │
+│  │  popup.js    │   │  sidebar.js   │   │  content.js   │   │
+│  │  (popup UI)  │   │  (side panel) │   │  (page inject)│   │
+│  └──────┬───────┘   └──────┬────────┘   └──────┬────────┘   │
 │         │                  │                   │            │
 │         └──────────────────┼───────────────────┘            │
 │                            │ shared/                        │
 │                 ┌──────────┴──────────┐                     │
 │                 │  api.js             │  POST /chat         │
 │                 │  context.js         │  ──────────────────►│
-│                 │  workflow.js        │                      │
+│                 │  workflow.js        │                     │
 │                 │  markdown.js        │◄────────────────────│
-│                 │  history.js         │  JSON response       │
+│                 │  history.js         │  JSON response      │
 │                 └─────────────────────┘                     │
 └─────────────────────────────────────────────────────────────┘
                               │
                               ▼
 ┌─────────────────────────────────────────────────────────────┐
-│                    FastAPI Backend                           │
+│                    FastAPI Backend                          │
 │                                                             │
 │   router.py          ──► classify_task()                    │
 │   workflow.py         ──► coding / writing / research       │
