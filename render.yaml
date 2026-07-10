@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: ai-one-backend
+    runtime: python
+
+    rootDir: backend
+
+    buildCommand: pip install -r requirements.txt
+
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+
+    envVars:
+      - key: IBM_API_KEY
+        sync: false
+
+      - key: IBM_PROJECT_ID
+        sync: false
+
+      - key: IBM_REGION
+        sync: false
